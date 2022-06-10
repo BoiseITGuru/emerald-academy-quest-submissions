@@ -33,3 +33,31 @@
     * ![Chapter 2 Day 1 Question 1 - Answer](images/C2D1Q1.png)
 2. Check that your variable is actually equals "the best" by executing a script to read that variable. Include a screenshot of the output.
     * ![Chapter 2 Day 1 Question 2 - Answer](images/C2D1Q2.png)
+## Chapter 2 - Day 2
+
+1. Explain why we wouldn't call changeGreeting in a script.
+    * changeGreeting modifies a value on the blockchain requiring gas fees and is thus a transaction.
+2. What does the AuthAccount mean in the prepare phase of the transaction?
+    * The AuthAccount is the user or account that is paying for and signing the transaction to the blockchain
+3. What is the difference between the prepare phase and the execute phase in the transaction?
+    * The prepare phase is used to access the accounts storage and the underlying data, while the execution phase is used to call your functions that update the blockchain.
+4. 
+    1. Contract Changes
+        * Add two new things inside your contract:
+            * A variable named myNumber that has type Int (set it to 0 when the contract is deployed)
+            * A function named updateMyNumber that takes in a new number named newNumber as a parameter that has type Int and updates myNumber to be newNumber
+        * 
+        ``` cadence
+        pub contract HelloWorld {
+        pub var greeting: String
+
+        init() {
+            self.greeting = "Hello World"
+        }
+
+        pub fun changeGreeting(newGreeting: String) {
+            self.greeting = newGreeting
+        }
+        ```
+}
+    
