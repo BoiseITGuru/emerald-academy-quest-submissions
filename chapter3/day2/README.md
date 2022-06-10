@@ -18,6 +18,10 @@
                 self.chainOfCustody <- []
             }
 
+            destroy() {
+                destroy self.chainOfCustody
+            }
+
             pub fun addCustodyExchange(custodyExhange: @CustodyExhange) {
                 self.chainOfCustody.append(<- custodyExhange)
             }
