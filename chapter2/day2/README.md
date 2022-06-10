@@ -56,4 +56,4 @@
             }
         }
         ```
-        ![Chapter 2 Day 2 Question 4 - Answer](images/C2D2Q4.png)
+        ![Chapter 2 Day 2 Question 4 - Answer](/images/C2D2Q4.png)
