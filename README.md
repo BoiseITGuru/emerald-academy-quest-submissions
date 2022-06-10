@@ -27,3 +27,37 @@
         * This also builds upon Approachability. You need developers to like writing code for a paticular platform otherwise they simply won't do it
     5. Resource Oriented Programming
         * While not required I thought Resrouce Oriented Programming was an important item to cover. Many of the flaws in other blockchain's smart contracts is that they really where not built for the ownership of resources. There are many reason why the current structures don't work well but most all of them are there because they a shoe horned into a platform built to operate like one long accounting ledger. With Resource Oriented Programming we can finally start brining addtional industries into the Web3 space because of the security and overall data structures implemented that are not possible in other blockchains.
+## Chapter 2 - Day 1
+
+1. Deploy a contract to account 0x03 called "JacobTucker". Inside that contract, declare a constant variable named is, and make it have type String. Initialize it to "the best" when your contract gets deployed.
+    * ![Chapter 2 Day 1 Question 1 - Answer](images/C2D1Q1.png)
+2. Check that your variable is actually equals "the best" by executing a script to read that variable. Include a screenshot of the output.
+    * ![Chapter 2 Day 1 Question 2 - Answer](images/C2D1Q2.png)
+## Chapter 2 - Day 2
+
+1. Explain why we wouldn't call changeGreeting in a script.
+    * changeGreeting modifies a value on the blockchain requiring gas fees and is thus a transaction.
+2. What does the AuthAccount mean in the prepare phase of the transaction?
+    * The AuthAccount is the user or account that is paying for and signing the transaction to the blockchain
+3. What is the difference between the prepare phase and the execute phase in the transaction?
+    * The prepare phase is used to access the accounts storage and the underlying data, while the execution phase is used to call your functions that update the blockchain.
+4. 
+    1. Contract Changes
+        * Add two new things inside your contract:
+            * A variable named myNumber that has type Int (set it to 0 when the contract is deployed)
+            * A function named updateMyNumber that takes in a new number named newNumber as a parameter that has type Int and updates myNumber to be newNumber
+        * 
+        ``` cadence
+        pub contract HelloWorld {
+        pub var greeting: String
+
+        init() {
+            self.greeting = "Hello World"
+        }
+
+        pub fun changeGreeting(newGreeting: String) {
+            self.greeting = newGreeting
+        }
+        ```
+}
+    
