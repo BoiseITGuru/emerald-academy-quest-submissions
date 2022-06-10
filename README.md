@@ -41,7 +41,7 @@
     * The AuthAccount is the user or account that is paying for and signing the transaction to the blockchain
 3. What is the difference between the prepare phase and the execute phase in the transaction?
     * The prepare phase is used to access the accounts storage and the underlying data, while the execution phase is used to call your functions that update the blockchain.
-4. 
+4. -
     1. Contract Changes
         * Add two new things inside your contract:
             * A variable named myNumber that has type Int (set it to 0 when the contract is deployed)
