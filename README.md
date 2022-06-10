@@ -49,15 +49,47 @@
         * 
         ``` cadence
         pub contract HelloWorld {
-        pub var greeting: String
+            pub var greeting: String
+            pub var myNumber: Int
 
-        init() {
-            self.greeting = "Hello World"
-        }
+            init() {
+                self.greeting = "Hello World"
+                self.myNumber = 0
+            }
 
-        pub fun changeGreeting(newGreeting: String) {
-            self.greeting = newGreeting
+            pub fun changeGreeting(newGreeting: String) {
+                self.greeting = newGreeting
+            }
+
+            pub fun updateMyNumber(newNumber: Int) {
+                self.myNumber = newNumber
+            }
         }
         ```
-}
+    2. Scripts
+        * Add a script that reads myNumber from the contract
+
+         ``` cadence
+        import HelloWorld from 0x01
+
+        pub fun main(): Int {
+        return HelloWorld.myNumber
+        }
+        ```
+    3. Transactions
+        * Add a transaction that takes in a parameter named myNewNumber and passes it into the updateMyNumber function. Verify that your number changed by running the script again.
+
+         ``` cadence
+        import HelloWorld from 0x01
+
+        transaction(myNewNumber: Int) {
+
+            prepare(signer: AuthAccount) {}
+
+            execute {
+                HelloWorld.updateMyNumber(newNumber: myNewNumber)
+            }
+        }
+        ```
+        ![Chapter 2 Day 2 Question 4 - Answer](images/C2D2Q4.png)
     
