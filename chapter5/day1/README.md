@@ -91,8 +91,6 @@
         pre {
             _custodiansName.length > 0: "Invalid Name"
             _dateOfExchange.length > 0: "Not valid date"
-
-              
         }
         self.chainOfCustody.insert(at: 0, <- create CustodyExhange(_custodiansName: _custodiansName, _dateOfExchange: _dateOfExchange))
     }
