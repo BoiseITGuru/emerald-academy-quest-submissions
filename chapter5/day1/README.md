@@ -90,7 +90,7 @@
     pub fun addCustodyExchange(_custodiansName: String, _dateOfExchange: String) {
         pre {
             _custodiansName.length > 0: "Invalid Name"
-            _dateOfExchange == "/^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$/": "Not valid date" // Currently getting error here about invalid escape character due to regex
+            _dateOfExchange.length > 0: "Not valid date"
 
               
         }
