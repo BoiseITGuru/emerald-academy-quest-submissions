@@ -94,6 +94,7 @@
     }
     ```
     ![Chapter 4 Day 2 Question 2 - Answer](/images/C4D2Q2.png)
+    
     3. Run the script and access something you CAN read from. Return it from the script.
     ``` cadence
     import ChainOfCustody from 0x01
