@@ -26,8 +26,8 @@
             * Area's 1, 2, 3, 4
     * privateFunc
         * Access Scoped
-            * Area's 1, 2, 3
+            * Area 1
     * contractFunc
         * Access Scoped
-            * Area 1
+            * Area's 1, 2, 3
         
