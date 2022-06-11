@@ -1,4 +1,4 @@
-# quest-submissions
+# emerald-academy-quest-submissions
 
 Quest submissions for the Emerald Academy Beginner Cadence Bootcamp June 2022
 
